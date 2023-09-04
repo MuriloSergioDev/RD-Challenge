@@ -104,6 +104,10 @@ function getCssWithTheHighestCustomerCount(newCssWithCustomersCount, cssWithMost
  * @param {number} cssWithMostCustomersCount
  */
 function isCustomersCountTie(customerSuccess, cssWithMostCustomersCount) {
+  if(cssWithMostCustomersCount === 0){
+    return true;
+  }
+
   const cssWithMostCustomersCountIndex =  customerSuccess.indexOf(cssWithMostCustomersCount);
   customerSuccess.splice(cssWithMostCustomersCountIndex, 1);
 
